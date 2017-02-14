@@ -25,7 +25,7 @@ basic details about themselves and pick form a list of airports.  We will one on
 will also call the contract to Add/Update it's sensor registration into the contract.
 For the purpose of this project, let's pretend  the sensor will have local 'config' that will hold something similar to:
 
-'''javascript
+```javascript
 {
 	contractAddress: 0xb61a1675eebb38a1fe16c2d724c0a0ac47529cf9,
 	sensorAddress: 0x67719186b640f0cf1a30c1f9f11ffc4f8370045e,
@@ -39,7 +39,7 @@ For the purpose of this project, let's pretend  the sensor will have local 'conf
 	country "US",
 	thresholdDb: 30
 }
-'''
+```
 
 The sensor will automaticaly determine it's GPS longitude and latitude.
 Each time the sensor it powered up, it will re-register itself with the contract which will set the longtitude and latitude.
@@ -50,7 +50,7 @@ If the noise exceeds a threshold, it is capable of making an rpc call to an ethe
 # Brainstorming Contract Needs - WORK IN PROGRESS
 Within the contract, we will need a struct to define the sensor and an array to hold all of those sensors.  We'll also need public functions to addUpdate sensor, addComplaint.
 
-'''javascript
+```javascript
 pragma solidity ^0.4.5;
 
 contract Located {
@@ -123,4 +123,4 @@ contract NoiseTracker is Located, Owned {
     function () payable {}
 
 }
- '''
+ ```
