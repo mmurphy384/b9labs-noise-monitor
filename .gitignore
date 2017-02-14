@@ -1,4 +1,5 @@
-app
-migrations
+app/
+migrations/
 
 *.swp
+
